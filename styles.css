@@ -1,0 +1,487 @@
+/* 1. VARIABEL WARNA (Gampang diganti di sini) */
+:root {
+  --biru-jatisari: #1e3a8a;
+  --emas-jatisari: #eab308;
+  --teks-gelap: #1f2937;
+  --teks-abu: #4b5563;
+  --bg-abu-muda: #f9fafb;
+  --putih: #ffffff;
+  --font-judul: "Oswald", sans-serif;
+  --font-isi: "Inter", sans-serif;
+}
+
+/* 2. PENGATURAN DASAR (RESET) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Efek scroll halus */
+}
+
+body {
+  font-family: var(--font-isi);
+  color: var(--teks-gelap);
+  background-color: var(--bg-abu-muda);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container Pembungkus agar konten rapi di tengah */
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 3. NAVBAR (NAVIGASI ATAS) */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(30, 58, 138, 0.9); /* Biru transparan */
+  backdrop-filter: blur(5px);
+  color: var(--putih);
+  padding: 16px 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-isi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-img {
+    height: 2.5rem;
+    width: auto;
+}
+
+.logo-teks {
+  font-family: var(--font-judul);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.menu-link {
+  display: none; /* Sembunyikan di HP */
+  gap: 24px;
+  font-weight: 500;
+}
+
+.menu-link a {
+  transition: color 0.3s;
+}
+
+.menu-link a:hover {
+  color: var(--emas-jatisari);
+}
+
+.btn-gabung {
+  background-color: var(--emas-jatisari);
+  color: var(--biru-jatisari);
+  padding: 8px 20px;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.btn-gabung:hover {
+  background-color: #facc15;
+}
+
+/* 4. HERO SECTION (BAGIAN UTAMA) */
+.hero {
+  position: relative;
+  height: 100vh; /* Tinggi layar penuh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--biru-jatisari);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(assets/JATISARI\ FC\ BARU\ no\ bg.png);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Efek gelap di foto */
+}
+
+.hero-konten {
+  position: relative;
+  z-index: 10;
+  color: var(--putih);
+  max-width: 800px;
+  padding: 0 16px;
+}
+
+.hero-tagline {
+  color: var(--emas-jatisari);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+}
+
+.hero-judul {
+  font-family: var(--font-judul);
+  font-size: 3rem; /* Ukuran untuk HP */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.hero-judul span {
+  color: var(--emas-jatisari);
+}
+
+.hero-deskripsi {
+  font-size: 1.125rem;
+  color: #e5e7eb;
+  margin-bottom: 32px;
+}
+
+.hero-tombol {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-direction: column; /* HP: tombol atas bawah */
+}
+
+.btn-utama {
+  background-color: var(--biru-jatisari);
+  border: 2px solid var(--biru-jatisari);
+  color: var(--putih);
+  padding: 12px 32px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-utama:hover {
+  background-color: #1e40af;
+}
+
+.btn-kedua {
+  background-color: transparent;
+  border: 2px solid var(--putih);
+  color: var(--putih);
+  padding: 12px 32px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-kedua:hover {
+  background-color: var(--putih);
+  color: var(--biru-jatisari);
+}
+
+.hero-img {
+  height: 400px;
+  width: auto;
+  z-index: 1;
+  margin-left: 80px;
+  display: none;
+}
+
+/* 5. TENTANG KLUB */
+.section {
+  padding: 80px 0;
+}
+
+.bg-putih {
+  background-color: var(--putih);
+}
+.bg-abu {
+  background-color: var(--bg-abu-muda);
+}
+
+.tentang-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.tentang-teks h2 {
+  font-family: var(--font-judul);
+  font-size: 2.25rem;
+  color: var(--biru-jatisari);
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.tentang-teks p {
+  color: var(--teks-abu);
+  margin-bottom: 16px;
+}
+
+.tentang-foto img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-bottom: 8px solid var(--emas-jatisari);
+  border-right: 8px solid var(--emas-jatisari);
+}
+
+/* 6. TIM KAMI */
+.judul-tengah {
+  text-align: center;
+  font-family: var(--font-judul);
+  font-size: 2.25rem;
+  color: var(--biru-jatisari);
+  margin-bottom: 48px;
+}
+
+.tim-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom di HP */
+  gap: 24px;
+}
+
+.kartu-tim {
+  background-color: var(--putih);
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.kartu-tim:hover {
+  transform: translateY(-8px); /* Efek melayang */
+}
+
+.kartu-tim i {
+  font-size: 2.25rem;
+  color: var(--biru-jatisari);
+  margin-bottom: 16px;
+}
+
+.kartu-tim h3 {
+  font-family: var(--font-judul);
+  font-size: 1.25rem;
+}
+
+.daftar-pemain {
+  list-style: none;
+  margin-top: 12px;
+  padding: 4px;
+  text-align: left;
+}
+
+.daftar-pemain li {
+  color: var(--teks-abu);
+  font-size: 0.95rem;
+  padding: 2px 0;
+  transition: color 0.3s;
+}
+
+.daftar-pemain li::before {
+  color: var(--emas-jatisari);
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.daftar-pemain li:hover {
+  color: var(--biru-jatisari);
+  font-weight: 600;
+}
+
+/* 7. GALERI */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 kolom di HP */
+  gap: 16px;
+}
+
+.galeri-item {
+  overflow: hidden;
+  border-radius: 6px;
+  height: 256px;
+}
+
+.galeri-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.galeri-item:hover img {
+  transform: scale(1.1); /* Efek zoom */
+}
+
+/* 8. AGENDA */
+.agenda-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kartu-agenda {
+  background-color: var(--putih);
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.border-emas {
+  border-top: 4px solid var(--emas-jatisari);
+}
+.border-biru {
+  border-top: 4px solid var(--biru-jatisari);
+}
+
+.kartu-agenda h3 {
+  font-family: var(--font-judul);
+  font-size: 1.5rem;
+  color: var(--biru-jatisari);
+  margin-bottom: 16px;
+}
+
+.daftar-latihan {
+  list-style: none;
+}
+
+.daftar-latihan li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+/* 9. KONTAK */
+.kontak-bg {
+  background-color: var(--biru-jatisari);
+  color: var(--putih);
+  text-align: center;
+  padding: 64px 0;
+}
+
+.kontak-bg h2 {
+  font-family: var(--font-judul);
+  font-size: 2.25rem;
+  margin-bottom: 16px;
+}
+
+.tombol-kontak-grid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-direction: column; /* HP: Atas Bawah */
+}
+
+.btn-wa {
+  background-color: #22c55e; /* Hijau WA */
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.btn-ig {
+  background: linear-gradient(to right, #a855f7, #ec4899); /* Gradasi IG */
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+/* 10. FOOTER */
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid #1f2937;
+}
+
+.footer-logo {
+  font-family: var(--font-judul);
+  font-size: 1.5rem;
+  color: var(--putih);
+  margin-bottom: 16px;
+}
+
+.footer-sosmed a {
+  font-size: 1.125rem;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+
+.footer-sosmed a:hover {
+  color: var(--putih);
+}
+
+/* 11. TAMPILAN UNTUK PC / LAPTOP (RESPONSIVE) */
+@media (min-width: 768px) {
+  .menu-link {
+    display: flex;
+  } /* Tampilkan menu di PC */
+
+  .hero {
+    background-image: none;
+  }
+
+  .hero-judul {
+    font-size: 4.5rem;
+  }
+  .hero-tagline {
+    font-size: 1rem;
+  }
+  .hero-tombol {
+    flex-direction: row;
+  }
+
+  .hero-img {
+    display: block;
+  }
+
+  .tentang-grid {
+    flex-direction: row;
+  }
+  .tentang-teks,
+  .tentang-foto {
+    width: 50%;
+  }
+
+  .tim-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .galeri-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .galeri-besar {
+    grid-column: span 2;
+  }
+
+  .agenda-grid {
+    flex-direction: row;
+  }
+  .tombol-kontak-grid {
+    flex-direction: row;
+  }
+}
