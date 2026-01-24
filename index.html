@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jatisari FC - Lebih Dari Sekedar Klub</title>
-
+    <title>Jatisari FC</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
       <div class="container navbar-isi">
         <div class="logo-teks">
           <img src="assets/JATISARI FC BARU no bg.png" alt="Logo Jatisari" class="navbar-img" />
-          <a href="#beranda">JATISARI FC</a>
+          <a href="#beranda"><i>JATISARI FC</i></a>
         </div>
         <div class="menu-link" id="menuLink">
           <a href="#tentang">Tentang</a>
@@ -23,11 +23,12 @@
           <a href="#tim">Tim</a>
           <a href="#formasi">Formasi</a>
           <a href="#galeri">Galeri</a>
+          <a href="#prestasi">Prestasi</a>
           <a href="#agenda">Agenda</a>
           <a href="#berita">Berita</a>
         </div>
         <div class="navbar-kanan">
-          <a href="#kontak" class="btn-gabung">Gabung</a>
+          <a href="#kontak" class="btn-gabung">Kontak</a>
           <button class="hamburger" id="hamburger" aria-label="Menu">
             <span></span>
             <span></span>
@@ -37,28 +38,30 @@
       </div>
     </nav>
 
+    <!-- HERO -->
     <header id="beranda" class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-konten">
-        <p class="hero-tagline">Klub Sepak Bola Desa Jatisari</p>
+        <p class="hero-tagline">Club Sepak Bola Desa Jatisari</p>
         <h1 class="hero-judul">
           BERMAIN, BERLATIH,<br />
           <span>BERTANDING.</span>
         </h1>
         <p class="hero-deskripsi">Wadah kebersamaan dan sportivitas untuk pemuda Jatisari.</p>
         <div class="hero-tombol">
-          <a href="#tentang" class="btn-utama">TENTANG KLUB</a>
+          <a href="#tentang" class="btn-utama">TENTANG CLUB</a>
           <a href="#tim" class="btn-kedua">LIHAT TIM</a>
         </div>
       </div>
       <img class="hero-img" src="assets/JATISARI FC BARU no bg.png" alt="Logo Jatisari Besar" />
     </header>
 
+    <!-- TENTANG -->
     <section id="tentang" class="section bg-putih">
       <div class="container tentang-grid">
         <div class="tentang-teks">
           <span style="color: var(--emas-jatisari); font-weight: 700">Sejak 19 Juni 2025</span>
-          <h2>LEBIH DARI SEKEDAR KLUB</h2>
+          <h2>LEBIH DARI SEKEDAR CLUB</h2>
           <p>Jatisari FC adalah klub sepak bola komunitas yang berdiri sebagai wadah latihan, kebersamaan, dan kompetisi bagi para pemain di wilayah Jatisari.</p>
           <p>Meskipun berstatus komunitas, kami memegang teguh kedisiplinan dan rasa hormat di dalam maupun di luar lapangan. Kami membangun identitas, bukan sekadar menendang bola.</p>
         </div>
@@ -68,6 +71,7 @@
       </div>
     </section>
 
+    <!-- SEJARAH -->
     <section id="sejarah" class="section bg-abu">
       <div class="container">
         <div style="text-align: center; margin-bottom: 64px">
@@ -89,7 +93,7 @@
           </div>
 
           <div class="timeline-item">
-            <div class="timeline-ikon"><i class="fa-solid fa-shoeprints"></i></div>
+            <div class="timeline-ikon"><i class="fa-solid fa-shoe-prints"></i></div>
             <div class="timeline-konten">
               <span class="timeline-tanggal">FASE PERUBAHAN</span>
               <h3>Perjuangan Sepasang Sepatu</h3>
@@ -115,6 +119,7 @@
       </div>
     </section>
 
+    <!-- TIM -->
     <section id="tim" class="section bg-abu">
       <div class="container">
         <h2 class="judul-tengah">SKUAD JATISARI FC</h2>
@@ -123,50 +128,51 @@
             <i class="fa-solid fa-hands"></i>
             <h3>KIPER</h3>
             <ul class="daftar-pemain">
-              <li>Dimas</li>
-              <li>Edy</li>
-              <li>Ardi</li>
+              <li><span class="nomor-pemain">1</span> Dimas</li>
+              <li><span class="nomor-pemain">99</span> Edi</li>
+              <li><span class="nomor-pemain">24</span> Ardiansyah</li>
             </ul>
           </div>
           <div class="kartu-tim">
             <i class="fa-solid fa-shield-halved"></i>
             <h3>BEK</h3>
             <ul class="daftar-pemain">
-              <li>Ayik</li>
-              <li>Rohman</li>
-              <li>Malisic (c)</li>
-              <li>Sans</li>
-              <li>Haris</li>
-              <li>Munir</li>
+              <li><span class="nomor-pemain">8</span> Ayik</li>
+              <li><span class="nomor-pemain">93</span> Rohman</li>
+              <li><span class="nomor-pemain">4</span> Malisic <span class="kapten">(c)</span></li>
+              <li><span class="nomor-pemain">27</span> Sans</li>
+              <li><span class="nomor-pemain">26</span> Haris</li>
+              <li><span class="nomor-pemain">5</span> Munir</li>
             </ul>
           </div>
           <div class="kartu-tim">
             <i class="fa-solid fa-arrows-to-circle"></i>
             <h3>GELANDANG</h3>
             <ul class="daftar-pemain">
-              <li>Lutfi</li>
-              <li>Huda</li>
-              <li>Beril</li>
-              <li>Mirza</li>
-              <li>Fahim</li>
-              <li>Adi J</li>
-              <li>Idris</li>
+              <li><span class="nomor-pemain">14</span> Lutfi</li>
+              <li><span class="nomor-pemain">9</span> Huda</li>
+              <li><span class="nomor-pemain">6</span> Beril</li>
+              <li><span class="nomor-pemain">20</span> Mirza</li>
+              <li><span class="nomor-pemain">17</span> Fahim</li>
+              <li><span class="nomor-pemain">10</span> Adi J</li>
+              <li><span class="nomor-pemain">3</span> Idris</li>
             </ul>
           </div>
           <div class="kartu-tim">
             <i class="fa-solid fa-futbol"></i>
             <h3>PENYERANG</h3>
             <ul class="daftar-pemain">
-              <li>Mahrus</li>
-              <li>Yudha</li>
-              <li>Saiful</li>
-              <li>Rudi</li>
+              <li><span class="nomor-pemain">11</span> Mahrez</li>
+              <li><span class="nomor-pemain">7</span> Yudha</li>
+              <li><span class="nomor-pemain">29</span> Saiful</li>
+              <li><span class="nomor-pemain">23</span> Rudi</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- FORMASI -->
     <section id="formasi" class="section bg-putih">
       <div class="container">
         <div style="text-align: center; margin-bottom: 48px">
@@ -186,15 +192,15 @@
               <div class="pemain-nama">Dimas</div>
             </div>
             <div class="pemain-wrapper pos-2">
-              <div class="pemain" title="Bek Kiri">3</div>
+              <div class="pemain" title="Bek Kiri">5</div>
               <div class="pemain-nama">Sans</div>
             </div>
             <div class="pemain-wrapper pos-3">
-              <div class="pemain" title="Bek Tengah">4</div>
+              <div class="pemain" title="Bek Tengah">3</div>
               <div class="pemain-nama">Rohman</div>
             </div>
             <div class="pemain-wrapper pos-4">
-              <div class="pemain" title="Bek Tengah">5</div>
+              <div class="pemain" title="Bek Tengah">4</div>
               <div class="pemain-nama">Malisic</div>
             </div>
             <div class="pemain-wrapper pos-5">
@@ -262,6 +268,7 @@
       </div>
     </section>
 
+    <!-- GALERI -->
     <section id="galeri" class="section bg-abu">
       <div class="container">
         <div style="text-align: center; margin-bottom: 48px">
@@ -278,6 +285,49 @@
       </div>
     </section>
 
+    <!-- PRESTASI -->
+    <section id="prestasi" class="section bg-abu">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px">
+          <h2 class="judul-tengah" style="margin-bottom: 8px">PRESTASI</h2>
+          <p style="color: var(--teks-abu)">Dokumentasi piala dan sertifikat penghargaan Jatisari FC</p>
+        </div>
+
+        <div class="prestasi-grid">
+          <div class="kartu-prestasi">
+            <div class="prestasi-visual">
+              <div class="img-box piala">
+                <img src="assets/pialatrofeo.jpeg" alt="Piala Jatisari FC" />
+                <span class="label-visual">PIALA</span>
+              </div>
+              <div class="img-box sertifikat">
+                <img src="assets/sertiftrofeo.jpeg" alt="Sertifikat Jatisari FC" />
+                <span class="label-visual">SERTIFIKAT</span>
+              </div>
+            </div>
+            <div class="prestasi-info">
+              <span class="prestasi-rank">JUARA 2</span>
+              <h3>Trofeo Remas Raja FC</h3>
+              <p>Berhasil meraih podium kedua pada ajang persahabatan ini.</p>
+              <span class="prestasi-tgl">Agustus 2025</span>
+            </div>
+          </div>
+
+          <div class="kartu-prestasi placeholder-prestasi">
+            <div class="visual-kosong">
+              <i class="fa-solid fa-award"></i>
+              <p>Target Prestasi Berikutnya</p>
+            </div>
+            <div class="prestasi-info">
+              <h3>Coming Soon</h3>
+              <p>Siap mengukir sejarah baru di turnamen mendatang.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
     <section id="agenda" class="section bg-putih">
       <div class="container">
         <h2 class="judul-tengah">AGENDA TIM</h2>
@@ -295,13 +345,14 @@
             <div style="background-color: var(--bg-abu-muda); padding: 16px; border-radius: 6px">
               <span style="background-color: var(--biru-jatisari); color: var(--emas-jatisari); font-size: 0.75rem; font-weight: 700; padding: 4px 8px; border-radius: 4px">SPARING</span>
               <p style="font-weight: 700; margin-top: 8px">Jatisari FC vs Putra Gelantangan FC</p>
-              <p style="color: var(--teks-abu); font-size: 0.875rem">Lapangan Desa Jatisari - Sabtu Mendatang</p>
+              <p style="color: var(--teks-abu); font-size: 0.875rem">Lapangan Desa Jatisari - Sabtu 15:30</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- BERITA -->
     <section id="berita" class="section bg-abu">
       <div class="container">
         <div style="text-align: center; margin-bottom: 48px">
@@ -320,8 +371,8 @@
                 <span><i class="fa-regular fa-calendar"></i> 12 Januari 2026</span>
                 <span><i class="fa-regular fa-user"></i> Admin JFC</span>
               </div>
-              <h3 class="berita-judul">Cedera Cengkol Kiri, Musim Rudi Tabuti Dipastikan Usai Lebih Cepat</h3>
-              <p class="berita-excerpt">Kabar buruk menimpa Jatisari FC. Striker andalan, Rudi Tabuti, dipastikan absen hingga akhir musim akibat cedera parah saat latihan di Pasundan Stadium...</p>
+              <h3 class="berita-judul">Cedera Cengkol Kiri, Musim ini Rudi Tabuti Dipastikan Usai Lebih Cepat</h3>
+              <p class="berita-excerpt">Kabar buruk menimpa Jatisari FC. Striker andalan, Rudi Tabuti, dipastikan absen hingga akhir musim akibat cedera parah saat latihan di Lapangan desa Jatisari...</p>
               <a href="#modal-berita-1" class="btn-baca">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </article>
@@ -345,22 +396,23 @@
       </div>
     </section>
 
+    <!-- MODAL BERITA -->
     <div id="modal-berita-1" class="modal-berita">
       <div class="modal-isi">
         <a href="#berita" class="modal-close"><i class="fa-solid fa-xmark"></i></a>
         <span style="color: var(--emas-jatisari); font-weight: bold; font-size: 0.8rem">12 JANUARI 2026</span>
-        <h2 style="font-family: var(--font-judul); color: var(--biru-jatisari); margin: 10px 0">Cedera Cengkol Kiri, Musim Rudi Tabuti Dipastikan Usai Lebih Cepat</h2>
+        <h2 style="font-family: var(--font-judul); color: var(--biru-jatisari); margin: 10px 0">Cedera Cengkol Kiri, Musim ini Rudi Tabuti Dipastikan Usai Lebih Cepat</h2>
         <div class="modal-teks">
           <p>
-            <strong>JATISARI</strong> - Kabar buruk menimpa Jatisari FC terkait kondisi striker andalan, Rudi Tabuti. Musim Rudi dipastikan selesai lebih awal karena harus menjalani pemulihan cedera serius pada cengkol (lengan/siku)
+            <strong>JATISARI</strong> - Kabar buruk menimpa Jatisari FC terkait kondisi striker andalan, Rudi Tabuti. Musim ini Rudi dipastikan selesai lebih awal karena harus menjalani pemulihan cedera serius pada cengkol (lengan/siku)
             kirinya.
           </p>
-          <p>Tabuti mendapat cedera tersebut saat sesi latihan intensif di Pasundan Stadium kemarin sore. Untuk persiapan Liga 7 di Puca Cangkring, Tabuti yang mengalami benturan harus dipapah keluar meninggalkan lapangan.</p>
+          <p>Tabuti mendapat cedera tersebut saat sesi latihan intensif di lapangan desa Jatisari kemarin sore. Untuk persiapan kades cup Cangkring, Tabuti yang mengalami benturan harus dipapah keluar meninggalkan lapangan.</p>
           <p>Situasi sempat dramatis karena ia harus dibawa menggunakan sepeda motor Beat merah tahun 2017 ke tukang patah tulang terdekat, sebelum akhirnya dilarikan ke RS Soebandi Patrang, Jember pada malam harinya.</p>
           <p>Awalnya sempat terjadi simpang siur, apakah Tabuti mengalami patah tulang atau dislokasi tangan kiri. Hal ini lantas menimbulkan kekhawatiran besar di benak manajer tim, Ahmad Rofik, dan asisten manajer Maulana Faqih.</p>
           <p>
             Kekhawatiran itu terbukti benar ketika tim medis Jatisari mengumumkan hasil pemeriksaan pada Minggu (11/01/2026) malam WIB. Ada kerusakan ligamen dan tulang di area lengan siku kiri sang pemain. Meski demikian, tim dokter
-            memastikan Tabuti tidak perlu absen sepanjang Cahyo (Bek Jatisari) yang sempat mengalami cedera ACL pada September 2024 lalu.
+            memastikan Tabuti tidak perlu absen sepanjang Cahyo (Bek Jatisari FC) yang sempat mengalami cedera ACL pada September 2024 lalu.
           </p>
           <p><em>"Cepat sembuh, Rudi. Keluarga besar Jatisari FC menantimu kembali di lapangan hijau!"</em></p>
         </div>
@@ -381,7 +433,7 @@
             Bermain tanpa kehadiran striker utama Rudi Tabuti yang dibekap cedera sehari sebelumnya, daya gedor Jatisari FC tampak sedikit berkurang. Trio penyerang Mahrus, Yudha, dan Saiful sudah berusaha keras membongkar pertahanan rapat
             Raung FC sejak menit awal.
           </p>
-          <p>Gelandang tengah Mirza dan Fahim berhasil menguasai lini tengah di babak pertama, namun beberapa peluang emas yang tercipta gagal dikonversi menjadi gol karena penyelesaian akhir yang kurang maksimal.</p>
+          <p>Gelandang tengah Huda dan Fahim berhasil menguasai lini tengah di babak pertama, namun beberapa peluang emas yang tercipta gagal dikonversi menjadi gol karena penyelesaian akhir yang kurang maksimal.</p>
           <p>
             Memasuki babak kedua, Raung FC memanfaatkan kelengahan barisan pertahanan Jatisari melalui skema serangan balik cepat. Meski Kiper Dimas sudah melakukan beberapa penyelamatan gemilang, gawang Jatisari akhirnya harus kebobolan.
           </p>
@@ -394,22 +446,45 @@
       </div>
     </div>
 
+    <!-- KONTAK -->
     <section id="kontak" class="kontak-bg">
-      <div class="container" style="max-width: 800px">
-        <h2>Ingin Bergabung dengan Jatisari FC?</h2>
-        <p style="color: #d1d5db">Terbuka untuk pemuda Jatisari yang memiliki semangat tinggi dan mau berkomitmen dalam latihan rutin.</p>
-        <div class="tombol-kontak-grid">
-          <a href="https://wa.me/6282301500359" class="btn-wa"> <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem"></i> Hubungi via WhatsApp </a>
-          <a href="https://www.instagram.com/jatisari_fc_25?igsh=M25rZHo2ZWo1Y2Nj" class="btn-ig"> <i class="fa-brands fa-instagram" style="font-size: 1.25rem"></i> DM Instagram </a>
+      <div class="container" style="max-width: 900px">
+        <div class="kontak-header">
+          <i class="fa-solid fa-phone-volume kontak-header-icon"></i>
+          <h2>Hubungi Kami</h2>
+          <p class="kontak-subtitle">Hubungi kami untuk bergabung atau mengajak sparing pertandingan</p>
+        </div>
+        <div class="kontak-grid">
+          <div class="kontak-item">
+            <i class="fa-solid fa-users-rays kontak-icon"></i>
+            <h2>Gabung Jatisari FC</h2>
+            <p>Terbuka untuk pemuda Jatisari yang memiliki semangat tinggi dan mau berkomitmen.</p>
+            <div class="tombol-kontak-grid">
+              <a href="https://wa.me/6282301500359?text=Halo%20Admin,%20saya%20ingin%20bergabung%20dengan%20Jatisari%20FC" class="btn-wa"> <i class="fa-brands fa-whatsapp"></i>WhatsApp </a>
+              <a href="https://www.instagram.com/jatisari_fc_25?igsh=M25rZHo2ZWo1Y2Nj" class="btn-ig"> <i class="fa-brands fa-instagram"></i> DM Instagram </a>
+            </div>
+          </div>
+
+          <div class="kontak-divider"></div>
+
+          <div class="kontak-item">
+            <i class="fa-solid fa-futbol kontak-icon"></i>
+            <h2>Ajak Sparing</h2>
+            <p>Punya tim dan ingin menguji taktik? Kami terbuka untuk pertandingan persahabatan.</p>
+            <div class="tombol-kontak-grid">
+              <a href="https://wa.me/6282301500359?text=Permisi%20Mas%20Rofik,%20Bisa%20sparing%20sama%20club%20kita%20mas?" class="btn-sparing" target="_blank"> <i class="fa-solid fa-handshake"></i> Kirim Undangan Sparing </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <div class="footer-logo">JATISARI FC</div>
         <img src="assets/JATISARI FC BARU no bg.png" alt="Logo Jatisari Footer" class="footer-img" />
-        <p style="font-size: 0.875rem; margin-bottom: 16px">© 2026 Jatisari FC. Lebih Dari Sekedar Klub.</p>
+        <p style="font-size: 0.875rem; margin-bottom: 16px">© 2026 Jatisari FC. Lebih Dari Sekedar Club.</p>
         <div class="footer-sosmed">
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://www.instagram.com/jatisari_fc_25?igsh=M25rZHo2ZWo1Y2Nj"><i class="fa-brands fa-instagram"></i></a>
@@ -418,6 +493,7 @@
       </div>
     </footer>
 
+    <!-- SCRIPT -->
     <script>
       const hamburger = document.getElementById("hamburger");
       const menuLink = document.getElementById("menuLink");
