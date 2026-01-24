@@ -8,6 +8,7 @@
   --putih: #ffffff;
   --font-judul: "Oswald", sans-serif;
   --font-isi: "Inter", sans-serif;
+  --shadow-kartu: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* 2. PENGATURAN DASAR (RESET) */
@@ -18,7 +19,8 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Efek scroll halus */
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px; /* FIXED BUG: Agar judul tidak tertutup navbar saat link diklik */
 }
 
 body {
@@ -33,24 +35,23 @@ a {
   color: inherit;
 }
 
-/* Container Pembungkus agar konten rapi di tengah */
 .container {
   max-width: 1152px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
-/* 3. NAVBAR (NAVIGASI ATAS) */
+/* 3. NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 50;
-  background-color: rgba(30, 58, 138, 0.9); /* Biru transparan */
-  backdrop-filter: blur(5px);
+  background-color: rgba(30, 58, 138, 0.95);
+  backdrop-filter: blur(8px); /* Efek Blur seperti iOS */
   color: var(--putih);
-  padding: 16px 0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-isi {
@@ -65,6 +66,7 @@ a {
   gap: 16px;
 }
 
+/* HAMBURGER MENU */
 .hamburger {
   display: block;
   flex-direction: column;
@@ -76,30 +78,28 @@ a {
 
 .hamburger span {
   width: 24px;
-  height: 3px;
+  height: 2px;
   background-color: var(--putih);
-  margin: 4px 0;
+  margin: 5px 0;
   transition: 0.3s;
   display: block;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(-45deg) translate(-2px, 2px);
+  transform: rotate(-45deg) translate(-5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
-  transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-5px, -5px);
 }
 
 .navbar-img {
   height: 2.5rem;
   width: auto;
-  margin-right: -12px;
-  margin-top: 1%;
+  margin-right: -8px;
+  margin-top: 1px;
 }
 
 .logo-teks {
@@ -113,17 +113,18 @@ a {
 }
 
 .menu-link {
-  display: none; /* Sembunyikan di HP */
+  display: none;
   gap: 24px;
   font-weight: 500;
   flex-direction: column;
   position: absolute;
-  top: 70px;
+  top: 65px;
   left: 0;
   right: 0;
-  background-color: rgba(30, 58, 138, 0.95);
+  background-color: rgba(30, 58, 138, 0.98);
   padding: 16px;
   z-index: 49;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .menu-link.active {
@@ -139,7 +140,6 @@ a {
 .menu-link a:last-child {
   border-bottom: none;
 }
-
 .menu-link a:hover {
   color: var(--emas-jatisari);
 }
@@ -150,17 +150,18 @@ a {
   padding: 8px 20px;
   font-weight: 700;
   border-radius: 50px;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-gabung:hover {
   background-color: #facc15;
+  transform: scale(1.05);
 }
 
-/* 4. HERO SECTION (BAGIAN UTAMA) */
+/* 4. HERO SECTION */
 .hero {
   position: relative;
-  height: 100vh; /* Tinggi layar penuh */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,7 +179,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Efek gelap di foto */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Polesan gradient */
 }
 
 .hero-konten {
@@ -200,7 +201,7 @@ a {
 
 .hero-judul {
   font-family: var(--font-judul);
-  font-size: 3rem; /* Ukuran untuk HP */
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 24px;
@@ -220,7 +221,7 @@ a {
   display: flex;
   gap: 16px;
   justify-content: center;
-  flex-direction: column; /* HP: tombol atas bawah */
+  flex-direction: column;
 }
 
 .btn-utama {
@@ -260,18 +261,25 @@ a {
   display: none;
 }
 
-/* 5. TENTANG KLUB */
+/* UTILITAS & SECTIONS */
 .section {
   padding: 80px 0;
 }
-
 .bg-putih {
   background-color: var(--putih);
 }
 .bg-abu {
   background-color: var(--bg-abu-muda);
 }
+.judul-tengah {
+  text-align: center;
+  font-family: var(--font-judul);
+  font-size: 2.25rem;
+  color: var(--biru-jatisari);
+  margin-bottom: 48px;
+}
 
+/* 5. TENTANG KLUB */
 .tentang-grid {
   display: flex;
   flex-direction: column;
@@ -298,20 +306,17 @@ a {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   border-bottom: 8px solid var(--emas-jatisari);
   border-right: 8px solid var(--emas-jatisari);
+  transition: transform 0.3s;
+}
+
+.tentang-foto img:hover {
+  transform: scale(1.02);
 }
 
 /* 6. TIM KAMI */
-.judul-tengah {
-  text-align: center;
-  font-family: var(--font-judul);
-  font-size: 2.25rem;
-  color: var(--biru-jatisari);
-  margin-bottom: 48px;
-}
-
 .tim-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kolom di HP */
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -319,13 +324,13 @@ a {
   background-color: var(--putih);
   padding: 32px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-kartu);
   text-align: center;
   transition: transform 0.3s;
 }
 
 .kartu-tim:hover {
-  transform: translateY(-8px); /* Efek melayang */
+  transform: translateY(-8px);
 }
 
 .kartu-tim i {
@@ -333,7 +338,6 @@ a {
   color: var(--biru-jatisari);
   margin-bottom: 16px;
 }
-
 .kartu-tim h3 {
   font-family: var(--font-judul);
   font-size: 1.25rem;
@@ -345,26 +349,23 @@ a {
   padding: 4px;
   text-align: left;
 }
-
 .daftar-pemain li {
   color: var(--teks-abu);
   font-size: 0.95rem;
   padding: 2px 0;
   transition: color 0.3s;
 }
-
 .daftar-pemain li::before {
   color: var(--emas-jatisari);
   font-weight: 700;
   margin-right: 6px;
 }
-
 .daftar-pemain li:hover {
   color: var(--biru-jatisari);
   font-weight: 600;
 }
 
-/* 7. FORMASI & STAF (BARU DITAMBAHKAN) */
+/* 7. FORMASI & STAF */
 .formasi-grid {
   display: flex;
   flex-direction: column;
@@ -372,20 +373,18 @@ a {
   align-items: center;
 }
 
-/* 7a. Tampilan Papan Formasi (Kiri/Atas) */
 .lapangan-taktik {
-  background-color: var(--biru-jatisari); /* Lapangan warna biru agar elegan */
+  background-color: var(--biru-jatisari);
   border: 4px solid var(--putih);
   border-radius: 8px;
   width: 100%;
   max-width: 400px;
-  aspect-ratio: 2 / 3; /* Proporsi lapangan bola vertikal */
+  aspect-ratio: 2 / 3;
   position: relative;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
-/* Garis Lapangan */
 .garis-tengah {
   position: absolute;
   top: 50%;
@@ -425,7 +424,6 @@ a {
   border-top: none;
 }
 
-/* Wrapper Pemain dengan Nama */
 .pemain-wrapper {
   position: absolute;
   display: flex;
@@ -435,7 +433,6 @@ a {
   transform: translate(-50%, -50%);
 }
 
-/* Pion Pemain (Bentuk Lingkaran Emas) */
 .pemain {
   width: 28px;
   height: 28px;
@@ -452,12 +449,10 @@ a {
   transition: transform 0.3s;
   cursor: default;
 }
-
 .pemain:hover {
   transform: scale(1.2);
 }
 
-/* Nama Pemain */
 .pemain-nama {
   font-size: 0.65rem;
   font-weight: 600;
@@ -470,14 +465,12 @@ a {
   display: block;
 }
 
-/* Posisi Koordinat 11 Pemain (Formasi 4-3-3) - MOBILE */
-/* Kiper */
+/* Posisi Pemain Mobile (Vertikal) */
 .pos-1 {
   bottom: auto;
   left: 50%;
   top: 95%;
 }
-/* Bek */
 .pos-2 {
   bottom: auto;
   left: 15%;
@@ -498,7 +491,6 @@ a {
   left: 85%;
   top: 75%;
 }
-/* Gelandang */
 .pos-6 {
   bottom: auto;
   left: 50%;
@@ -514,7 +506,6 @@ a {
   left: 75%;
   top: 45%;
 }
-/* Penyerang */
 .pos-9 {
   bottom: auto;
   left: 20%;
@@ -531,7 +522,6 @@ a {
   top: 20%;
 }
 
-/* 7b. Tampilan Susunan Staf (Kanan/Bawah) */
 .staf-wrapper {
   width: 100%;
   max-width: 500px;
@@ -579,25 +569,22 @@ a {
 /* 8. GALERI */
 .galeri-grid {
   display: grid;
-  grid-template-columns: 1fr; /* 1 kolom di HP */
+  grid-template-columns: 1fr;
   gap: 16px;
 }
-
 .galeri-item {
   overflow: hidden;
   border-radius: 6px;
   height: 256px;
 }
-
 .galeri-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s;
 }
-
 .galeri-item:hover img {
-  transform: scale(1.1); /* Efek zoom */
+  transform: scale(1.1);
 }
 
 /* 9. AGENDA */
@@ -606,33 +593,32 @@ a {
   flex-direction: column;
   gap: 24px;
 }
-
 .kartu-agenda {
   background-color: var(--putih);
   padding: 32px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-kartu);
   flex: 1;
+  transition: transform 0.3s;
 }
-
+.kartu-agenda:hover {
+  transform: translateY(-3px);
+} /* Polesan Hover */
 .border-emas {
   border-top: 4px solid var(--emas-jatisari);
 }
 .border-biru {
   border-top: 4px solid var(--biru-jatisari);
 }
-
 .kartu-agenda h3 {
   font-family: var(--font-judul);
   font-size: 1.5rem;
   color: var(--biru-jatisari);
   margin-bottom: 16px;
 }
-
 .daftar-latihan {
   list-style: none;
 }
-
 .daftar-latihan li {
   display: flex;
   justify-content: space-between;
@@ -641,112 +627,38 @@ a {
   margin-bottom: 16px;
 }
 
-/* 10. KONTAK */
-.kontak-bg {
-  background-color: var(--biru-jatisari);
-  color: var(--putih);
-  text-align: center;
-  padding: 64px 0;
-}
-
-.kontak-bg h2 {
-  font-family: var(--font-judul);
-  font-size: 2.25rem;
-  margin-bottom: 16px;
-}
-
-.tombol-kontak-grid {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 32px;
-  flex-direction: column; /* HP: Atas Bawah */
-}
-
-.btn-wa {
-  background-color: #22c55e; /* Hijau WA */
-  padding: 12px 24px;
-  border-radius: 50px;
-  font-weight: 700;
-}
-
-.btn-ig {
-  background: linear-gradient(to right, #a855f7, #ec4899); /* Gradasi IG */
-  padding: 12px 24px;
-  border-radius: 50px;
-  font-weight: 700;
-}
-
-/* 11. FOOTER */
-.footer {
-  background-color: #111827;
-  color: #9ca3af;
-  text-align: center;
-  padding: 32px 0;
-  border-top: 1px solid #1f2937;
-}
-
-.footer-img {
-  height: 3.5rem;
-  width: auto;
-  margin-top: -10px;
-}
-
-.footer-logo {
-  font-family: var(--font-judul);
-  font-size: 1.5rem;
-  color: var(--putih);
-  margin-bottom: 16px;
-}
-
-.footer-sosmed a {
-  font-size: 1.125rem;
-  margin: 0 8px;
-  transition: color 0.3s;
-}
-
-.footer-sosmed a:hover {
-  color: var(--putih);
-}
-
-/* 12. SECTION BERITA */
+/* 10. BERITA */
 .berita-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
 }
-
 .kartu-berita {
   background-color: var(--bg-abu-muda);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-kartu);
   transition: transform 0.3s;
   display: flex;
   flex-direction: column;
 }
-
 .kartu-berita:hover {
   transform: translateY(-5px);
 }
-
 .berita-img-wrapper {
   position: relative;
   height: 200px;
   overflow: hidden;
 }
-
 .berita-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s;
 }
-
 .kartu-berita:hover .berita-img {
   transform: scale(1.05);
 }
-
 .berita-kategori {
   position: absolute;
   top: 16px;
@@ -758,21 +670,18 @@ a {
   border-radius: 4px;
   z-index: 2;
 }
-
 .bg-emas {
   background-color: var(--emas-jatisari);
 }
 .bg-biru {
   background-color: var(--biru-jatisari);
 }
-
 .berita-konten {
   padding: 24px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-
 .berita-meta {
   display: flex;
   gap: 16px;
@@ -780,7 +689,6 @@ a {
   color: var(--teks-abu);
   margin-bottom: 12px;
 }
-
 .berita-judul {
   font-family: var(--font-judul);
   font-size: 1.25rem;
@@ -788,14 +696,12 @@ a {
   color: var(--biru-jatisari);
   margin-bottom: 12px;
 }
-
 .berita-excerpt {
   font-size: 0.95rem;
   color: var(--teks-abu);
   margin-bottom: 24px;
   flex: 1;
 }
-
 .btn-baca {
   font-weight: 700;
   color: var(--biru-jatisari);
@@ -806,19 +712,19 @@ a {
   transition: color 0.3s;
   width: fit-content;
 }
-
 .btn-baca:hover {
   color: var(--emas-jatisari);
 }
 
-/* Modal Pop-Up Berita */
+/* Modal Berita dengan Efek Blur (Kaca) */
 .modal-berita {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -827,12 +733,10 @@ a {
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
-
 .modal-berita:target {
   opacity: 1;
   visibility: visible;
 }
-
 .modal-isi {
   background-color: var(--putih);
   width: 90%;
@@ -844,12 +748,11 @@ a {
   overflow-y: auto;
   transform: translateY(20px);
   transition: transform 0.3s ease-in-out;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
-
 .modal-berita:target .modal-isi {
   transform: translateY(0);
 }
-
 .modal-close {
   position: absolute;
   top: 16px;
@@ -865,31 +768,207 @@ a {
   border-radius: 50%;
   transition: 0.3s;
 }
-
 .modal-close:hover {
-  color: #ef4444; /* Warna merah saat dihover */
+  color: #ef4444;
+  background: #fee2e2;
 }
-
 .modal-teks p {
   margin-bottom: 16px;
   color: var(--teks-gelap);
   line-height: 1.7;
 }
 
-/* 11. TAMPILAN UNTUK PC / LAPTOP (RESPONSIVE) */
+/* 11. KONTAK & FOOTER */
+.kontak-bg {
+  background-color: var(--biru-jatisari);
+  color: var(--putih);
+  text-align: center;
+  padding: 64px 0;
+}
+.kontak-bg h2 {
+  font-family: var(--font-judul);
+  font-size: 2.25rem;
+  margin-bottom: 16px;
+}
+.tombol-kontak-grid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-direction: column;
+}
+.btn-wa {
+  background-color: #22c55e;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: transform 0.3s;
+}
+.btn-ig {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: transform 0.3s;
+}
+.btn-wa:hover,
+.btn-ig:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid #1f2937;
+}
+.footer-img {
+  height: 3.5rem;
+  width: auto;
+  margin-bottom: 8px;
+  filter: grayscale(50%);
+  transition: 0.3s;
+}
+.footer-img:hover {
+  filter: grayscale(0%);
+}
+.footer-logo {
+  font-family: var(--font-judul);
+  font-size: 1.5rem;
+  color: var(--putih);
+  margin-bottom: 16px;
+}
+.footer-sosmed a {
+  font-size: 1.125rem;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+.footer-sosmed a:hover {
+  color: var(--putih);
+}
+
+/* 12. SECTION SEJARAH (TIMELINE) */
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 16px; /* Jarak untuk garis di HP */
+}
+
+/* Garis Vertikal Timeline */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 36px; /* Posisi garis di HP */
+  width: 4px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 48px;
+  padding-left: 64px; /* Geser konten ke kanan dari garis */
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Ikon Lingkaran di Garis */
+.timeline-ikon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--biru-jatisari);
+  color: var(--putih);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  box-shadow: 0 0 0 6px var(--bg-abu-muda); /* Efek cincin pemisah */
+  z-index: 2;
+  transition: transform 0.3s;
+}
+
+.timeline-item:hover .timeline-ikon {
+  transform: scale(1.1);
+}
+
+.timeline-ikon.bg-emas {
+  background-color: var(--emas-jatisari);
+}
+
+/* Kotak Konten Sejarah */
+.timeline-konten {
+  background-color: var(--putih);
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-kartu);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.timeline-item:hover .timeline-konten {
+  transform: translateX(5px);
+}
+
+.timeline-konten.border-emas {
+  border-left: 4px solid var(--emas-jatisari);
+}
+
+.timeline-tanggal {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--biru-jatisari);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.timeline-konten h3 {
+  font-family: var(--font-judul);
+  font-size: 1.5rem;
+  color: var(--teks-gelap);
+  margin-bottom: 12px;
+}
+
+.timeline-konten p {
+  color: var(--teks-abu);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Tanda Panah (Segitiga) di Kotak */
+.timeline-konten::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -8px;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent var(--putih) transparent transparent;
+}
+
+/* 12. TAMPILAN UNTUK PC / LAPTOP (RESPONSIVE) */
 @media (min-width: 768px) {
   .hamburger {
     display: none !important;
   }
-
   .menu-link {
     display: flex !important;
     flex-direction: row;
     position: static;
     background-color: transparent;
     padding: 0;
+    box-shadow: none;
   }
-
   .menu-link a {
     border-bottom: none;
     padding: 0;
@@ -899,11 +978,9 @@ a {
   .hero {
     background-image: none;
   }
-
   .hero-konten {
     margin-top: 6%;
   }
-
   .hero-judul {
     font-size: 4.5rem;
   }
@@ -913,7 +990,6 @@ a {
   .hero-tombol {
     flex-direction: row;
   }
-
   .hero-img {
     display: block;
     margin-top: 8%;
@@ -931,26 +1007,20 @@ a {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* Tampilan PC */
   .formasi-grid {
     flex-direction: row-reverse;
     justify-content: center;
     gap: 64px;
     align-items: stretch;
   }
-
-  /* Putar Lapangan Jadi Horizontal (Menyerang ke Kanan) */
   .lapangan-taktik {
     aspect-ratio: 3 / 2;
     max-width: 800px;
     flex: 2;
   }
-
   .staf-wrapper {
     flex: 1;
   }
-
-  /* Putar Garis Lapangan */
   .garis-tengah {
     top: 0;
     left: 50%;
@@ -967,7 +1037,7 @@ a {
     height: 180px;
     border-left: none;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  } /* Jadi Kotak Kiri */
+  }
   .kotak-penalti-atas {
     top: 50%;
     left: auto;
@@ -977,60 +1047,49 @@ a {
     height: 180px;
     border-right: none;
     border-top: 2px solid rgba(255, 255, 255, 0.3);
-  } /* Jadi Kotak Kanan */
+  }
 
-  /* Putar Posisi Pemain (Serang Kanan) */
-  /* Kiper */
+  /* Posisi Pemain PC (Horizontal Menyerang Kanan) */
   .pemain-wrapper.pos-1 {
     left: 5%;
     top: 50%;
   }
-  /* Bek Kiri  */
   .pemain-wrapper.pos-2 {
     left: 25%;
     top: 15%;
   }
-  /* Bek Tengah*/
   .pemain-wrapper.pos-3 {
     left: 20%;
     top: 60%;
   }
-  /* Bek Tengah*/
   .pemain-wrapper.pos-4 {
     left: 20%;
     top: 40%;
   }
-  /* Bek Kanan */
   .pemain-wrapper.pos-5 {
     left: 25%;
     top: 85%;
   }
-  /* CDM       */
   .pemain-wrapper.pos-6 {
     left: 40%;
     top: 50%;
   }
-  /* CM Kiri   */
   .pemain-wrapper.pos-7 {
     left: 55%;
     top: 75%;
   }
-  /* CM Kanan  */
   .pemain-wrapper.pos-8 {
     left: 55%;
     top: 25%;
   }
-  /* Winger L  */
   .pemain-wrapper.pos-9 {
     left: 80%;
     top: 15%;
   }
-  /* Striker   */
   .pemain-wrapper.pos-10 {
     left: 85%;
     top: 50%;
   }
-  /* Winger R  */
   .pemain-wrapper.pos-11 {
     left: 80%;
     top: 85%;
@@ -1049,8 +1108,62 @@ a {
   .tombol-kontak-grid {
     flex-direction: row;
   }
-
   .berita-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 Kolom Berita di PC */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* sejarah */
+  /* TIMELINE PC: Garis di tengah, konten selang-seling */
+  .timeline-container {
+    padding-left: 0;
+  }
+  .timeline-container::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 48px;
+  }
+
+  /* Item Genap ke Kanan */
+  .timeline-item:nth-child(even) {
+    margin-left: auto;
+    padding-left: 48px;
+    padding-right: 0;
+  }
+
+  /* Ikon di Tengah */
+  .timeline-ikon {
+    left: auto;
+    right: -24px;
+  }
+  .timeline-item:nth-child(even) .timeline-ikon {
+    left: -24px;
+    right: auto;
+  }
+
+  /* Segitiga Panah Menyesuaikan */
+  .timeline-konten::before {
+    left: auto;
+    right: -8px;
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent var(--putih);
+  }
+  .timeline-item:nth-child(even) .timeline-konten::before {
+    left: -8px;
+    right: auto;
+    border-width: 8px 8px 8px 0;
+    border-color: transparent var(--putih) transparent transparent;
+  }
+
+  /* Efek Hover PC */
+  .timeline-item:hover .timeline-konten {
+    transform: translateX(-5px);
+  }
+  .timeline-item:nth-child(even):hover .timeline-konten {
+    transform: translateX(5px);
   }
 }
