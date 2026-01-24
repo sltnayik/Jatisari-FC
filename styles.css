@@ -1390,19 +1390,13 @@ a {
   margin-bottom: 16px;
 }
 
-/* Tampilan PC */
-@media (min-width: 768px) {
-  .prestasi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* RESPONSIVE DESKTOP */
+/* RESPONSIVE DESKTOP (768px and up) */
 @media (min-width: 768px) {
   /* Navbar */
   .hamburger {
     display: none !important;
   }
+
   .menu-link {
     display: flex !important;
     flex-direction: row;
@@ -1411,68 +1405,72 @@ a {
     padding: 0;
     box-shadow: none;
   }
+
   .menu-link a {
     border-bottom: none;
     padding: 0;
     color: var(--putih);
   }
 
-  /* =======
-  hero 
-  ========== */
+  /* Hero */
   .hero {
     background-image: none;
   }
+
   .hero-konten {
     margin-top: 6%;
   }
+
   .hero-judul {
     font-size: 4.5rem;
   }
+
   .hero-tagline {
     font-size: 1rem;
   }
+
   .hero-tombol {
     flex-direction: row;
   }
+
   .hero-img {
     display: block;
     margin-top: 8%;
   }
 
-  /* =======
-  tentang 
-  ========== */
+  /* About */
   .tentang-grid {
     flex-direction: row;
   }
+
   .tentang-teks,
   .tentang-foto {
     width: 50%;
   }
 
-  /* tim */
+  /* Team */
   .tim-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* =======
-  formasi 
-  ==========*/
+  /* Formation */
   .formasi-grid {
     flex-direction: row-reverse;
     justify-content: center;
     gap: 64px;
     align-items: stretch;
   }
+
   .lapangan-taktik {
     aspect-ratio: 3 / 2;
     max-width: 800px;
     flex: 2;
   }
+
   .staf-wrapper {
     flex: 1;
   }
+
   .garis-tengah {
     top: 0;
     left: 50%;
@@ -1480,6 +1478,7 @@ a {
     height: 100%;
     transform: translateX(-50%);
   }
+
   .kotak-penalti-bawah {
     bottom: auto;
     left: 0;
@@ -1490,6 +1489,7 @@ a {
     border-left: none;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   }
+
   .kotak-penalti-atas {
     top: 50%;
     left: auto;
@@ -1501,73 +1501,77 @@ a {
     border-top: 2px solid rgba(255, 255, 255, 0.3);
   }
 
-  /* Posisi Pemain PC (Horizontal Menyerang Kanan) */
+  /* Player Positions */
   .pemain-wrapper.pos-1 {
     left: 5%;
     top: 50%;
   }
+
   .pemain-wrapper.pos-2 {
     left: 25%;
     top: 15%;
   }
+
   .pemain-wrapper.pos-3 {
     left: 20%;
     top: 60%;
   }
+
   .pemain-wrapper.pos-4 {
     left: 20%;
     top: 40%;
   }
+
   .pemain-wrapper.pos-5 {
     left: 25%;
     top: 85%;
   }
+
   .pemain-wrapper.pos-6 {
     left: 40%;
     top: 50%;
   }
+
   .pemain-wrapper.pos-7 {
     left: 55%;
     top: 75%;
   }
+
   .pemain-wrapper.pos-8 {
     left: 55%;
     top: 25%;
   }
+
   .pemain-wrapper.pos-9 {
     left: 80%;
     top: 15%;
   }
+
   .pemain-wrapper.pos-10 {
     left: 85%;
     top: 50%;
   }
+
   .pemain-wrapper.pos-11 {
     left: 80%;
     top: 85%;
   }
 
+  /* Gallery */
   .galeri-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .galeri-besar {
     grid-column: span 2;
   }
 
+  /* Agenda */
   .agenda-grid {
     flex-direction: row;
   }
-  .tombol-kontak-grid {
-    flex-direction: row;
-  }
-  .berita-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  /* =======
-  kontak 
-  ========== */
-  /* Responsif h2 Kontak untuk Desktop */
+  /* Contact */
   .kontak-bg > .container > h2 {
     font-size: 3.5rem;
   }
@@ -1576,27 +1580,37 @@ a {
     font-size: 4.5rem;
   }
 
-  /* ======
-  Tim
-  ========= */
-  /* Desktop: Nomor Punggung Lebih Besar */
+  .tombol-kontak-grid {
+    flex-direction: row;
+  }
+
+  /* Team - Desktop */
   .nomor-pemain {
     width: 28px;
     height: 28px;
     font-size: 0.85rem;
     margin-right: 8px;
   }
+
   .daftar-pemain li {
     padding: 8px 12px;
   }
 
-  /* ======
-  sejarah 
-  =========*/
-  /* TIMELINE PC: Garis di tengah, konten selang-seling */
+  /* News */
+  .berita-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Achievements */
+  .prestasi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* History / Timeline */
   .timeline-container {
     padding-left: 0;
   }
+
   .timeline-container::before {
     left: 50%;
     transform: translateX(-50%);
@@ -1608,30 +1622,29 @@ a {
     padding-right: 48px;
   }
 
-  /* Item Genap ke Kanan */
   .timeline-item:nth-child(even) {
     margin-left: auto;
     padding-left: 48px;
     padding-right: 0;
   }
 
-  /* Ikon di Tengah */
   .timeline-ikon {
     left: auto;
     right: -24px;
   }
+
   .timeline-item:nth-child(even) .timeline-ikon {
     left: -24px;
     right: auto;
   }
 
-  /* Segitiga Panah Menyesuaikan */
   .timeline-konten::before {
     left: auto;
     right: -8px;
     border-width: 8px 0 8px 8px;
     border-color: transparent transparent transparent var(--putih);
   }
+
   .timeline-item:nth-child(even) .timeline-konten::before {
     left: -8px;
     right: auto;
@@ -1639,10 +1652,10 @@ a {
     border-color: transparent var(--putih) transparent transparent;
   }
 
-  /* Efek Hover PC */
   .timeline-item:hover .timeline-konten {
     transform: translateX(-5px);
   }
+
   .timeline-item:nth-child(even):hover .timeline-konten {
     transform: translateX(5px);
   }
