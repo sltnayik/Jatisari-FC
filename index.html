@@ -17,14 +17,22 @@
           <img src="assets/JATISARI FC BARU no bg.png" alt="" class="navbar-img" />
           JATISARI FC
         </div>
-        <div class="menu-link">
+        <div class="menu-link" id="menuLink">
           <a href="#tentang">Tentang</a>
           <a href="#tim">Tim</a>
           <a href="#formasi">Formasi</a>
           <a href="#galeri">Galeri</a>
           <a href="#agenda">Agenda</a>
+          <a href="#berita">Berita</a>
         </div>
-        <a href="#kontak" class="btn-gabung">Gabung</a>
+        <div class="navbar-kanan">
+          <a href="#kontak" class="btn-gabung">Gabung</a>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -250,6 +258,102 @@
       </div>
     </section>
 
+    <section id="berita" class="section bg-putih">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px">
+          <h2 class="judul-tengah" style="margin-bottom: 8px">BERITA TERBARU</h2>
+          <p style="color: var(--teks-abu)">Informasi terkini seputar pertandingan dan kabar tim Jatisari FC</p>
+        </div>
+
+        <div class="berita-grid">
+          <article class="kartu-berita">
+            <div class="berita-img-wrapper">
+              <span class="berita-kategori bg-emas">KABAR TIM</span>
+              <img src="assets/rudicedera.jpeg" alt="Rudi Tabuti Cedera" class="berita-img" />
+            </div>
+            <div class="berita-konten">
+              <div class="berita-meta">
+                <span><i class="fa-regular fa-calendar"></i> 12 Januari 2026</span>
+                <span><i class="fa-regular fa-user"></i> Admin JFC</span>
+              </div>
+              <h3 class="berita-judul">Cedera Cengkol Kiri, Musim Rudi Tabuti Dipastikan Usai Lebih Cepat</h3>
+              <p class="berita-excerpt">
+                Kabar buruk menimpa Jatisari FC. Striker andalan, Rudi Tabuti, dipastikan absen hingga akhir musim akibat cedera parah saat latihan di Pasundan Stadium. Sang pemain harus dilarikan ke RS Soebandi...
+              </p>
+              <a href="#modal-berita-1" class="btn-baca">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="kartu-berita">
+            <div class="berita-img-wrapper">
+              <span class="berita-kategori bg-biru">PERTANDINGAN</span>
+              <img src="assets/IMG-20260113-WA0035.jpg" alt="Jatisari FC vs Raung FC" class="berita-img" />
+            </div>
+            <div class="berita-konten">
+              <div class="berita-meta">
+                <span><i class="fa-regular fa-calendar"></i> 13 Januari 2026</span>
+                <span><i class="fa-regular fa-user"></i> Admin JFC</span>
+              </div>
+              <h3 class="berita-judul">Langkah Terhenti di 32 Besar Kades Cup 2026, Jatisari FC Akui Keunggulan Raung FC</h3>
+              <p class="berita-excerpt">
+                Perjuangan Jatisari FC di turnamen bergengsi Kades Cup Cangkring 2026 harus terhenti lebih awal. Bertanding pada Selasa sore (13/01) dengan kondisi pincang, JFC harus mengakui kekalahan tipis atas Raung FC...
+              </p>
+              <a href="#modal-berita-2" class="btn-baca">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal-berita-1" class="modal-berita">
+      <div class="modal-isi">
+        <a href="#berita" class="modal-close"><i class="fa-solid fa-xmark"></i></a>
+        <span style="color: var(--emas-jatisari); font-weight: bold; font-size: 0.8rem">12 JANUARI 2026</span>
+        <h2 style="font-family: var(--font-judul); color: var(--biru-jatisari); margin: 10px 0">Cedera Cengkol Kiri, Musim Rudi Tabuti Dipastikan Usai Lebih Cepat</h2>
+        <div class="modal-teks">
+          <p>
+            <strong>JATISARI</strong> - Kabar buruk menimpa Jatisari FC terkait kondisi striker andalan, Rudi Tabuti. Musim Rudi dipastikan selesai lebih awal karena harus menjalani pemulihan cedera serius pada cengkol (lengan/siku)
+            kirinya.
+          </p>
+          <p>Tabuti mendapat cedera tersebut saat sesi latihan intensif di Pasundan Stadium kemarin sore. Untuk persiapan Liga 7 di Puca Cangkring, Tabuti yang mengalami benturan harus dipapah keluar meninggalkan lapangan.</p>
+          <p>Situasi sempat dramatis karena ia harus dibawa menggunakan sepeda motor Beat merah tahun 2017 ke tukang patah tulang terdekat, sebelum akhirnya dilarikan ke RS Soebandi Patrang, Jember pada malam harinya.</p>
+          <p>Awalnya sempat terjadi simpang siur, apakah Tabuti mengalami patah tulang atau dislokasi tangan kiri. Hal ini lantas menimbulkan kekhawatiran besar di benak manajer tim, Ahmad Rofik, dan asisten manajer Maulana Faqih.</p>
+          <p>
+            Kekhawatiran itu terbukti benar ketika tim medis Jatisari mengumumkan hasil pemeriksaan pada Minggu (11/01/2026) malam WIB. Ada kerusakan ligamen dan tulang di area lengan siku kiri sang pemain. Meski demikian, tim dokter
+            memastikan Tabuti tidak perlu absen sepanjang Cahyo (Bek Jatisari) yang sempat mengalami cedera ACL pada September 2024 lalu.
+          </p>
+          <p><em>"Cepat sembuh, Rudi. Keluarga besar Jatisari FC menantimu kembali di lapangan hijau!"</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-berita-2" class="modal-berita">
+      <div class="modal-isi">
+        <a href="#berita" class="modal-close"><i class="fa-solid fa-xmark"></i></a>
+        <span style="color: var(--emas-jatisari); font-weight: bold; font-size: 0.8rem">13 JANUARI 2026</span>
+        <h2 style="font-family: var(--font-judul); color: var(--biru-jatisari); margin: 10px 0">Langkah Terhenti di 32 Besar Kades Cup 2026, Jatisari FC Akui Keunggulan Raung FC</h2>
+        <div class="modal-teks">
+          <p>
+            <strong>CANGKRING</strong> - Perjuangan Jatisari FC dalam perburuan gelar juara Kades Cup Cangkring 2026 harus kandas di babak 32 besar. Bertanding pada Selasa sore (13/01/2026), skuad asuhan Head Coach Bramdani harus mengakui
+            keunggulan lawan tangguh, Raung FC.
+          </p>
+          <p>
+            Bermain tanpa kehadiran striker utama Rudi Tabuti yang dibekap cedera sehari sebelumnya, daya gedor Jatisari FC tampak sedikit berkurang. Trio penyerang Mahrus, Yudha, dan Saiful sudah berusaha keras membongkar pertahanan rapat
+            Raung FC sejak menit awal.
+          </p>
+          <p>Gelandang tengah Mirza dan Fahim berhasil menguasai lini tengah di babak pertama, namun beberapa peluang emas yang tercipta gagal dikonversi menjadi gol karena penyelesaian akhir yang kurang maksimal.</p>
+          <p>
+            Memasuki babak kedua, Raung FC memanfaatkan kelengahan barisan pertahanan Jatisari melalui skema serangan balik cepat. Meski Kiper Dimas sudah melakukan beberapa penyelamatan gemilang, gawang Jatisari akhirnya harus kebobolan.
+          </p>
+          <p>
+            "Ini bukan akhir segalanya. Anak-anak sudah bermain dengan hati dan memberikan segalanya di atas lapangan, apalagi kita kehilangan Rudi di saat krusial. Kekalahan ini akan menjadi bahan evaluasi staf pelatih untuk mempersiapkan
+            tim yang lebih solid di agenda sparing dan kompetisi berikutnya," ujar Manajer Tim, Ahmad Rofik pasca laga.
+          </p>
+          <p><em>Tetap semangat Jatisari FC! Lebih Dari Sekedar Club.</em></p>
+        </div>
+      </div>
+    </div>
+
     <section id="kontak" class="kontak-bg">
       <div class="container" style="max-width: 800px">
         <h2>Ingin Bergabung dengan Jatisari FC?</h2>
@@ -273,5 +377,24 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const menuLink = document.getElementById("menuLink");
+
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        menuLink.classList.toggle("active");
+      });
+
+      // Tutup menu ketika link diklik
+      const links = menuLink.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", function () {
+          hamburger.classList.remove("active");
+          menuLink.classList.remove("active");
+        });
+      });
+    </script>
   </body>
 </html>
