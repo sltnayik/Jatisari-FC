@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
@@ -30,7 +30,7 @@
         <div class="navbar-kanan">
           <a href="#kontak" class="btn-gabung">Kontak</a>
 
-          <button class="hamburger" id="hamburger" aria-label="Menu">
+          <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -61,7 +61,7 @@
     <section id="tentang" class="section bg-putih">
       <div class="container tentang-grid">
         <div class="tentang-teks">
-          <span style="color: var(--emas-jatisari); font-weight: 700">Sejak 19 Juni 2025</span>
+          <span class="highlight-label">Sejak 19 Juni 2025</span>
           <h2>LEBIH DARI SEKEDAR CLUB</h2>
           <p>Jatisari FC adalah klub sepak bola komunitas yang berdiri sebagai wadah latihan, kebersamaan, dan kompetisi bagi para pemain di wilayah Jatisari.</p>
           <p>Meskipun berstatus komunitas, kami memegang teguh kedisiplinan dan rasa hormat di dalam maupun di luar lapangan. Kami membangun identitas, bukan sekadar menendang bola.</p>
@@ -75,9 +75,9 @@
     <!-- SEJARAH -->
     <section id="sejarah" class="section bg-abu">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 64px">
-          <h2 class="judul-tengah" style="margin-bottom: 8px">SEJARAH PERJUANGAN</h2>
-          <p style="color: var(--teks-abu)">Dari "cekeran" di lapangan desa hingga menjadi kebanggaan desa</p>
+        <div class="section-head section-head-lg">
+          <h2 class="judul-tengah head-tight">SEJARAH PERJUANGAN</h2>
+          <p class="section-subtitle">Dari "cekeran" di lapangan desa hingga menjadi kebanggaan desa</p>
         </div>
 
         <div class="timeline-container">
@@ -106,9 +106,9 @@
           </div>
 
           <div class="timeline-item">
-            <div class="timeline-ikon bg-emas"><i class="fa-solid fa-flag" style="color: var(--biru-jatisari)"></i></div>
+            <div class="timeline-ikon bg-emas"><i class="fa-solid fa-flag icon-biru"></i></div>
             <div class="timeline-konten border-emas">
-              <span class="timeline-tanggal" style="color: var(--emas-jatisari)">19 JUNI 2025</span>
+              <span class="timeline-tanggal text-emas">19 JUNI 2025</span>
               <h3>Lahirnya ISPANSEL & JATISARI FC</h3>
               <p>
                 Momen bersejarah pun tiba. Rofik menginisiasi pembuatan grup WhatsApp "ISPANSEL" (Istana Pantai Selatan) untuk menyatukan seluruh pemuda. Tanggal ini ditandai sebagai hari lahirnya klub. Jumlah anggota terus bertambah,
@@ -158,19 +158,16 @@
               <li><span class="nomor-pemain">17</span> Fahim</li>
               <li><span class="nomor-pemain">10</span> Adi J</li>
               <li><span class="nomor-pemain">3</span> Idris</li>
-              <li><span class="nomor-pemain"></span> Wildan</li>
-              <li><span class="nomor-pemain">19</span> Sucipto</li>
             </ul>
           </div>
           <div class="kartu-tim">
             <i class="fa-solid fa-futbol"></i>
             <h3>PENYERANG</h3>
             <ul class="daftar-pemain">
-              <li><span class="nomor-pemain">11</span> Mahrez</li>
+              <li><span class="nomor-pemain">11</span> Mahrus</li>
               <li><span class="nomor-pemain">7</span> Yudha</li>
               <li><span class="nomor-pemain">23</span> Rudi</li>
               <li><span class="nomor-pemain">29</span> Saiful</li>
-              <li><span class="nomor-pemain">21</span> Farhan</li>
               <li><span class="nomor-pemain">30</span> Affan</li>
               <li><span class="nomor-pemain">77</span> Dimas</li>
             </ul>
@@ -182,9 +179,9 @@
     <!-- FORMASI -->
     <section id="formasi" class="section bg-putih">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 48px">
-          <h2 class="judul-tengah" style="margin-bottom: 8px">FORMASI & MANAJEMEN</h2>
-          <p style="color: var(--teks-abu)">Susunan Taktik Utama dan Jajaran Pelatih Jatisari FC</p>
+        <div class="section-head">
+          <h2 class="judul-tengah head-tight">FORMASI & MANAJEMEN</h2>
+          <p class="section-subtitle">Susunan Taktik Utama dan Jajaran Pelatih Jatisari FC</p>
         </div>
 
         <div class="formasi-grid">
@@ -278,9 +275,9 @@
     <!-- GALERI -->
     <section id="galeri" class="section bg-abu">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 48px">
-          <h2 class="judul-tengah" style="margin-bottom: 8px">GALERI KEGIATAN</h2>
-          <p style="color: var(--teks-abu)">Momen Latihan & Sparing Jatisari FC</p>
+        <div class="section-head">
+          <h2 class="judul-tengah head-tight">GALERI KEGIATAN</h2>
+          <p class="section-subtitle">Momen Latihan & Sparing Jatisari FC</p>
         </div>
         <div class="galeri-grid">
           <div class="galeri-item"><img src="assets/IMG-20250812-WA0069.jpg" alt="Sesi latihan Jatisari FC" loading="lazy" /></div>
@@ -295,9 +292,9 @@
     <!-- PRESTASI -->
     <section id="prestasi" class="section bg-abu">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 48px">
-          <h2 class="judul-tengah" style="margin-bottom: 8px">PRESTASI</h2>
-          <p style="color: var(--teks-abu)">Dokumentasi piala dan sertifikat penghargaan Jatisari FC</p>
+        <div class="section-head">
+          <h2 class="judul-tengah head-tight">PRESTASI</h2>
+          <p class="section-subtitle">Dokumentasi piala dan sertifikat penghargaan Jatisari FC</p>
         </div>
 
         <div class="prestasi-grid">
@@ -340,19 +337,19 @@
         <h2 class="judul-tengah">AGENDA TIM</h2>
         <div class="agenda-grid">
           <div class="kartu-agenda border-emas">
-            <h3><i class="fa-regular fa-calendar-check" style="margin-right: 8px"></i> Jadwal Latihan</h3>
+            <h3><i class="fa-regular fa-calendar-check icon-gap"></i> Jadwal Latihan</h3>
             <ul class="daftar-latihan">
-              <li><span>Selasa</span> <strong style="color: #000">15:30 WIB</strong></li>
-              <li><span>Jumat</span> <strong style="color: #000">15:30 WIB</strong></li>
-              <li><span>Minggu</span> <strong style="color: #000">15:30 WIB</strong></li>
+              <li><span>Selasa</span> <strong class="agenda-jam">15:30 WIB</strong></li>
+              <li><span>Jumat</span> <strong class="agenda-jam">15:30 WIB</strong></li>
+              <li><span>Minggu</span> <strong class="agenda-jam">15:30 WIB</strong></li>
             </ul>
           </div>
           <div class="kartu-agenda border-biru">
-            <h3><i class="fa-solid fa-bullhorn" style="margin-right: 8px"></i> Kegiatan Terbaru</h3>
-            <div style="background-color: var(--bg-abu-muda); padding: 16px; border-radius: 6px">
-              <span style="background-color: var(--biru-jatisari); color: var(--emas-jatisari); font-size: 0.75rem; font-weight: 700; padding: 4px 8px; border-radius: 4px">SPARING</span>
-              <p style="font-weight: 700; margin-top: 8px">Jatisari FC vs Putra Gelantangan FC</p>
-              <p style="color: var(--teks-abu); font-size: 0.875rem">Lapangan Desa Jatisari - Sabtu 15:30</p>
+            <h3><i class="fa-solid fa-bullhorn icon-gap"></i> Kegiatan Terbaru</h3>
+            <div class="agenda-highlight-box">
+              <span class="agenda-label">SPARING</span>
+              <p class="agenda-highlight-title">Jatisari FC vs Putra Gelantangan FC</p>
+              <p class="agenda-highlight-meta">Lapangan Desa Jatisari - Sabtu 15:30</p>
             </div>
           </div>
         </div>
@@ -362,9 +359,9 @@
     <!-- LOKASI -->
     <section id="lokasi" class="section bg-putih">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 48px">
-          <h2 class="judul-tengah" style="margin-bottom: 8px">HOME BASE</h2>
-          <p style="color: var(--teks-abu)">Kunjungi kami di lapangan kebanggaan Desa Jatisari</p>
+        <div class="section-head">
+          <h2 class="judul-tengah head-tight">HOME BASE</h2>
+          <p class="section-subtitle">Kunjungi kami di lapangan kebanggaan Desa Jatisari</p>
         </div>
 
         <div class="lokasi-wrapper">
@@ -373,7 +370,7 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15791.355817649894!2d113.63236725!3d-8.31879715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd69baeb6cbc995%3A0x77c103586d32273!2sLapangan%20desa%20jatisari!5e0!3m2!1sen!2sid!4v1769363676439!5m2!1sen!2sid"
               width="100%"
               height="450"
-              style="border: 0"
+              class="map-frame"
               allowfullscreen=""
               loading="lazy"
             >
@@ -381,12 +378,12 @@
           </div>
 
           <div class="lokasi-info-card">
-            <i class="fa-solid fa-location-dot" style="font-size: 2rem; color: var(--emas-jatisari); margin-bottom: 15px"></i>
+            <i class="fa-solid fa-location-dot lokasi-ikon"></i>
             <h3>Pasundan Arena</h3>
             <p>Dusun Krajan, Desa Jatisari, Kec. Jenggawah<br />Kabupaten Jember, Jawa Timur</p>
-            <hr style="margin: 20px 0; opacity: 0.1" />
+            <hr class="lokasi-divider" />
             <h4>Fasilitas:</h4>
-            <ul style="list-style: none; font-size: 0.9rem; color: var(--teks-abu)">
+            <ul class="lokasi-fasilitas">
               <li><i class="fa-solid fa-person-running text-emas"></i> Jogging Track (Lintasan Lari)</li>
               <li><i class="fa-solid fa-dumbbell text-emas"></i>Fasilitas Mini Gym</li>
               <li><i class="fa-solid fa-leaf text-emas"></i> Area Terbuka & View Pegunungan</li>
@@ -400,9 +397,9 @@
     <!-- BERITA -->
     <section id="berita" class="section bg-abu">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 48px">
-          <h2 class="judul-tengah" style="margin-bottom: 8px">BERITA TERBARU</h2>
-          <p style="color: var(--teks-abu)">Informasi terkini seputar pertandingan dan kabar tim Jatisari FC</p>
+        <div class="section-head">
+          <h2 class="judul-tengah head-tight">BERITA TERBARU</h2>
+          <p class="section-subtitle">Informasi terkini seputar pertandingan dan kabar tim Jatisari FC</p>
         </div>
 
         <div class="berita-grid">
@@ -445,8 +442,8 @@
     <div id="modal-berita-1" class="modal-berita">
       <div class="modal-isi">
         <a href="#berita" class="modal-close"><i class="fa-solid fa-xmark"></i></a>
-        <span style="color: var(--emas-jatisari); font-weight: bold; font-size: 0.8rem">12 JANUARI 2026</span>
-        <h2 style="font-family: var(--font-judul); color: var(--biru-jatisari); margin: 10px 0">Cedera Cengkol Kiri, Musim ini Rudi Tabuti Dipastikan Usai Lebih Cepat</h2>
+        <span class="modal-date">12 JANUARI 2026</span>
+        <h2 class="modal-judul">Cedera Cengkol Kiri, Musim ini Rudi Tabuti Dipastikan Usai Lebih Cepat</h2>
         <div class="modal-teks">
           <p>
             <strong>JATISARI</strong> - Kabar buruk menimpa Jatisari FC terkait kondisi striker andalan, Rudi Tabuti. Musim ini Rudi dipastikan selesai lebih awal karena harus menjalani pemulihan cedera serius pada cengkol (lengan/siku)
@@ -467,8 +464,8 @@
     <div id="modal-berita-2" class="modal-berita">
       <div class="modal-isi">
         <a href="#berita" class="modal-close"><i class="fa-solid fa-xmark"></i></a>
-        <span style="color: var(--emas-jatisari); font-weight: bold; font-size: 0.8rem">13 JANUARI 2026</span>
-        <h2 style="font-family: var(--font-judul); color: var(--biru-jatisari); margin: 10px 0">Langkah Terhenti di 32 Besar Kades Cup 2026, Jatisari FC Akui Keunggulan Raung FC</h2>
+        <span class="modal-date">13 JANUARI 2026</span>
+        <h2 class="modal-judul">Langkah Terhenti di 32 Besar Kades Cup 2026, Jatisari FC Akui Keunggulan Raung FC</h2>
         <div class="modal-teks">
           <p>
             <strong>CANGKRING</strong> - Perjuangan Jatisari FC dalam perburuan gelar juara Kades Cup Cangkring 2026 harus kandas di babak 32 besar. Bertanding pada Selasa sore (13/01/2026), skuad asuhan Head Coach Bramdani harus mengakui
@@ -493,7 +490,7 @@
 
     <!-- KONTAK -->
     <section id="kontak" class="kontak-bg">
-      <div class="container" style="max-width: 900px">
+      <div class="container container-kontak">
         <div class="kontak-header">
           <i class="fa-solid fa-phone-volume kontak-header-icon"></i>
           <h2>Hubungi Kami</h2>
@@ -503,7 +500,7 @@
           <div class="kontak-item">
             <i class="fa-solid fa-users-rays kontak-icon"></i>
             <h2>Menjadi Bagian TIM</h2>
-            <p style="text-align: center">Terbuka untuk pemuda Jatisari yang memiliki semangat tinggi dan mau berkomitmen.</p>
+            <p class="kontak-desc">Terbuka untuk pemuda Jatisari yang memiliki semangat tinggi dan mau berkomitmen.</p>
             <div class="tombol-kontak-grid">
               <a href="https://wa.me/6282301500359?text=Halo%20Admin,%20saya%20ingin%20bergabung%20dengan%20Jatisari%20FC" class="btn-wa" target="_blank"> <i class="fa-brands fa-whatsapp"></i>WhatsApp </a>
               <a href="https://www.instagram.com/jatisarifc_?igsh=M25rZHo2ZWo1Y2Nj" class="btn-ig" target="_blank"> <i class="fa-brands fa-instagram"></i>Instagram </a>
@@ -515,7 +512,7 @@
           <div class="kontak-item">
             <i class="fa-solid fa-futbol kontak-icon"></i>
             <h2>Laga Uji Coba</h2>
-            <p style="text-align: center">Punya tim dan ingin menguji taktik? Kami terbuka untuk pertandingan persahabatan.</p>
+            <p class="kontak-desc">Punya tim dan ingin menguji taktik? Kami terbuka untuk pertandingan persahabatan.</p>
             <div class="tombol-kontak-grid">
               <a href="https://wa.me/6282301500359?text=Permisi%20Mas%20Rofik,%20Bisa%20sparing%20sama%20club%20kita%20mas?" class="btn-sparing" target="_blank"> <i class="fa-solid fa-handshake"></i> Kirim Undangan Sparing </a>
             </div>
@@ -529,7 +526,7 @@
       <div class="container">
         <div class="footer-logo">JATISARI FC</div>
         <img src="assets/JATISARI FC BARU no bg.png" alt="Jatisari FC Logo Footer" width="120" height="112" class="footer-img" />
-        <p style="font-size: 0.875rem; margin-bottom: 16px">© 2026 Jatisari FC. Lebih Dari Sekedar Club.</p>
+        <p class="footer-copy">&copy; 2026 Jatisari FC. Lebih Dari Sekedar Club.</p>
         <div class="footer-sosmed">
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://www.instagram.com/jatisarifc_?igsh=M25rZHo2ZWo1Y2Nj"><i class="fa-brands fa-instagram"></i></a>
@@ -545,24 +542,53 @@
       <i class="fa-solid fa-arrow-up"></i>
     </button>
 
+    <!-- LIGHTBOX GALERI -->
+    <div id="galeriLightbox" class="lightbox" aria-hidden="true">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Tutup galeri">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button type="button" class="lightbox-nav prev" id="lightboxPrev" aria-label="Gambar sebelumnya">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <figure class="lightbox-figure">
+        <img id="lightboxImage" src="" alt="" />
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button type="button" class="lightbox-nav next" id="lightboxNext" aria-label="Gambar berikutnya">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
     <!-- SCRIPT -->
     <script>
       // HAMBURGER MENU
       const hamburger = document.getElementById("hamburger");
       const menuLink = document.getElementById("menuLink");
 
+      function setMobileMenuState(isOpen) {
+        hamburger.classList.toggle("active", isOpen);
+        menuLink.classList.toggle("active", isOpen);
+        hamburger.setAttribute("aria-expanded", String(isOpen));
+        document.body.classList.toggle("menu-open", isOpen);
+      }
+
       hamburger.addEventListener("click", function () {
-        hamburger.classList.toggle("active");
-        menuLink.classList.toggle("active");
+        const isOpen = !menuLink.classList.contains("active");
+        setMobileMenuState(isOpen);
       });
 
       // Tutup menu ketika link diklik (khusus mobile)
       const links = menuLink.querySelectorAll("a");
       links.forEach((link) => {
         link.addEventListener("click", function () {
-          hamburger.classList.remove("active");
-          menuLink.classList.remove("active");
+          setMobileMenuState(false);
         });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && menuLink.classList.contains("active")) {
+          setMobileMenuState(false);
+        }
       });
 
       // SCROLL TO TOP BUTTON
@@ -581,6 +607,82 @@
           top: 0,
           behavior: "smooth",
         });
+      });
+
+      // GALERI LIGHTBOX
+      const galleryImages = Array.from(document.querySelectorAll(".galeri-item img"));
+      const lightbox = document.getElementById("galeriLightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const lightboxCaption = document.getElementById("lightboxCaption");
+      const lightboxClose = document.getElementById("lightboxClose");
+      const lightboxPrev = document.getElementById("lightboxPrev");
+      const lightboxNext = document.getElementById("lightboxNext");
+      let currentImageIndex = 0;
+
+      function showLightboxImage(index) {
+        const image = galleryImages[index];
+        if (!image) return;
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightboxCaption.textContent = image.alt;
+      }
+
+      function openLightbox(index) {
+        currentImageIndex = index;
+        showLightboxImage(currentImageIndex);
+        lightbox.classList.add("show");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("show");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        showLightboxImage(currentImageIndex);
+      }
+
+      function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        showLightboxImage(currentImageIndex);
+      }
+
+      galleryImages.forEach((image, index) => {
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("role", "button");
+        image.setAttribute("aria-label", `Buka galeri gambar ${index + 1}`);
+
+        image.addEventListener("click", function () {
+          openLightbox(index);
+        });
+
+        image.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox(index);
+          }
+        });
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightboxPrev.addEventListener("click", prevImage);
+      lightboxNext.addEventListener("click", nextImage);
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (!lightbox.classList.contains("show")) return;
+        if (event.key === "Escape") closeLightbox();
+        if (event.key === "ArrowRight") nextImage();
+        if (event.key === "ArrowLeft") prevImage();
       });
     </script>
   </body>
